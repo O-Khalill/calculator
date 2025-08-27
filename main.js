@@ -5,6 +5,8 @@ for (let i = 0; i < buttons.length; ++i) {
   buttons[i].addEventListener("click", () => {
     if (buttons[i].innerText === "clear") {
       text.value = "";
+    } else if (buttons[i].innerText === "." && text.value.includes(".")) {
+      text.value = text.value.slice(0, -1);
     } else if (buttons[i].innerText === "del") {
       text.value = text.value.slice(0, -1);
     } else if (buttons[i].innerText === "=") {
@@ -12,7 +14,6 @@ for (let i = 0; i < buttons.length; ++i) {
       setTimeout(() => {
         text.value = result;
       }, 100);
-
       setTimeout(() => {
         text.value = "";
       }, 1000);
