@@ -99,7 +99,8 @@ header .timer a:active {
 body {
   display: flex;
   flex-direction: column;
-  min-height: auto;
+
+  height: 100vh;
 }
 
 header {
